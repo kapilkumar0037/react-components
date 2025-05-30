@@ -6,12 +6,27 @@ export type ButtonProps = {
 };
 
 export type InputProps = {
-    type?: string;
+  type?: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  placeholder?: string;
+  name?: string;
+  className?: string;
+  disabled?: boolean;
+  label?: string;
+};
+
+export type SelectProps = {
+  selectedValue: string;
+  onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  placeholder?: string;
+  className?: string;
+  disabled?: boolean;
+  options: Array<IOption>;
+  label?: string;
+};
+
+export interface IOption {
     value: string;
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-    placeholder?: string;
-    name?: string;
-    className?: string;
-    disabled?: boolean;
-    label?: string;
-  };
+    label: string;
+}
