@@ -16,6 +16,16 @@ export type InputProps = {
   label?: string;
 };
 
+export type CheckboxProps = {
+    value: string;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    name?: string;
+    className?: string;
+    disabled?: boolean;
+    label?: string;
+    checked?: boolean;
+  };
+
 export type SelectProps = {
   selectedValue: string;
   onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
