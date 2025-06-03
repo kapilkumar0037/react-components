@@ -1,3 +1,5 @@
+import type { ChangeEvent } from "react";
+
 export type ButtonProps = {
   label: string;
   onClick?: () => void;
@@ -35,6 +37,16 @@ export type SelectProps = {
   options: Array<IOption>;
   label?: string;
 };
+
+export type RangeProps = {
+    onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+    className?: string;
+    disabled?: boolean;
+    label?: string;
+    min?: number;
+    max?: number;
+    step?: number;
+  };
 
 export interface IOption {
     value: string;

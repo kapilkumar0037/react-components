@@ -4,7 +4,8 @@ import { Button } from './components/Button'
 import { Input } from './components/Input'
 import { Select } from './components/Select'
 import type { IOption } from './shared/types'
-import { Checkbox } from './components/Checkbox'
+import { Checkbox } from './components/Checkbox';
+import { Range } from './components/Range'
 
 function App() {
   const [selectedOption, setSelectedOption] = useState<string>('null')  
@@ -34,6 +35,8 @@ function App() {
       <Select label='Age' options={options} onChange={onAgeChange} selectedValue={selectedOption}/>
       <br />
       <Checkbox label='Checkbox' value='' onChange={onCheckChange}/>
+      <br/>
+      <Range label="Range" onChange={onCheckChange}/>
     </>
   )
 }
