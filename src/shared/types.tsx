@@ -18,6 +18,18 @@ export type InputProps = {
   label?: string;
 };
 
+export type TextareaProps = {
+    value: string;
+    onChange: (event: ChangeEvent<HTMLTextAreaElement>) => void;
+    placeholder?: string;
+    name?: string;
+    className?: string;
+    disabled?: boolean;
+    label?: string;
+    rows?: number;
+  };
+  
+
 export type CheckboxProps = {
     value: string;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;

@@ -6,6 +6,7 @@ import { Select } from './components/Select'
 import type { IOption } from './shared/types'
 import { Checkbox } from './components/Checkbox';
 import { Range } from './components/Range'
+import { Textarea } from './components/Textarea'
 
 function App() {
   const [selectedOption, setSelectedOption] = useState<string>('null')  
@@ -36,7 +37,9 @@ function App() {
       <br />
       <Checkbox label='Checkbox' value='' onChange={onCheckChange}/>
       <br/>
-      <Range label="Range" onChange={onCheckChange}/>
+      <Range label="Range" onChange={onAgeChange}/>
+      <br/>
+      <Textarea label="Textarea" value='' onChange={onAgeChange}/>
     </>
   )
 }
