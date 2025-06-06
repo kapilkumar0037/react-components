@@ -25,6 +25,10 @@ function App() {
     console.log(event.target.checked);
   }
 
+  const ontextAreaChange = (event: any) => {
+    console.log(event.target.value);
+  }
+
   const options: IOption[] = [ {label: 'Male', value: 'M'}, {label: 'Female', value: 'F'}]
 
   return (
@@ -39,7 +43,7 @@ function App() {
       <br/>
       <Range label="Range" onChange={onAgeChange}/>
       <br/>
-      <Textarea label="Textarea" value='' onChange={onAgeChange}/>
+      <Textarea label="Textarea" value='' onChange={ontextAreaChange}/>
     </>
   )
 }
