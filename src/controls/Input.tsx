@@ -14,7 +14,7 @@ export const Input = ({
     <>
       {label && (
         <label htmlFor={name} className="form-label">
-          Email address
+          {label}
         </label>
       )}
       <input

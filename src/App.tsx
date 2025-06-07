@@ -1,15 +1,17 @@
 import { useState } from 'react'
 import './App.scss'
-import { Button } from './components/Button'
-import { Input } from './components/Input'
-import { Select } from './components/Select'
+import { Button } from './controls/Button'
+import { Input } from './controls/Input'
+import { Select } from './controls/Select'
 import type { IOption } from './shared/types'
-import { Checkbox } from './components/Checkbox';
-import { Range } from './components/Range'
-import { Textarea } from './components/Textarea'
+import { Checkbox } from './controls/Checkbox';
+import { Range } from './controls/Range'
+import { Textarea } from './controls/Textarea'
+import { UsernameInput } from './components/Username'
 
 function App() {
   const [selectedOption, setSelectedOption] = useState<string>('null')  
+  const [value, setValue] = useState('');
   const onButtonClick = () => {
     console.log('Button clicked!')
   }
@@ -44,6 +46,8 @@ function App() {
       <Range label="Range" onChange={onAgeChange}/>
       <br/>
       <Textarea label="Textarea" value='' onChange={ontextAreaChange}/>
+      <br/>
+      <UsernameInput />
     </>
   )
 }
